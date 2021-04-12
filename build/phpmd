@@ -1,0 +1,9 @@
+/Users/hannajohansson/dbwebb-kurser/mvc/me/game/src/Dice/Game.php:25	The method playGame() has a Cyclomatic Complexity of 13. The configured cyclomatic complexity threshold is 10.
+/Users/hannajohansson/dbwebb-kurser/mvc/me/game/src/Dice/Game.php:25	The method playGame() has an NPath complexity of 408. The configured NPath complexity threshold is 200.
+/Users/hannajohansson/dbwebb-kurser/mvc/me/game/src/Dice/Game.php:86	The method playGame uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.
+/Users/hannajohansson/dbwebb-kurser/mvc/me/game/src/Dice/Game.php:92	The method playGame uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.
+/Users/hannajohansson/dbwebb-kurser/mvc/me/game/src/Router/Router.php:21	The method dispatch() has a Cyclomatic Complexity of 21. The configured cyclomatic complexity threshold is 10.
+/Users/hannajohansson/dbwebb-kurser/mvc/me/game/src/Router/Router.php:60	Missing class import via use statement (line '60', column '29').
+/Users/hannajohansson/dbwebb-kurser/mvc/me/game/src/Dice/Dice.php	-	Unexpected token: ?, line: 22, col: 13, file: /Users/hannajohansson/dbwebb-kurser/mvc/me/game/src/Dice/Dice.php.
+/Users/hannajohansson/dbwebb-kurser/mvc/me/game/src/Dice/DiceHand.php	-	Unexpected token: array, line: 22, col: 13, file: /Users/hannajohansson/dbwebb-kurser/mvc/me/game/src/Dice/DiceHand.php.
+/Users/hannajohansson/dbwebb-kurser/mvc/me/game/src/Dice/GraphicalDice.php	-	Unexpected token: array, line: 19, col: 13, file: /Users/hannajohansson/dbwebb-kurser/mvc/me/game/src/Dice/GraphicalDice.php.
