@@ -45,7 +45,7 @@ class GraphicalDice
         }
         return $res . " = " . $this->sum;
     }
-    
+
     public function graphic()
     {
         return "dice-" . $this->getLastRoll();

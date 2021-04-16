@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 namespace hajh20\Dice;
+
 use hajh20\Dice\Dice;
 use hajh20\Dice\DiceHand;
 use hajh20\Dice\GraphicalDice;
@@ -14,8 +15,6 @@ use function Mos\Functions\{
     url,
     destroySession
 };
-
-
 
 /**
  * Class Game
@@ -68,7 +67,7 @@ class Game
 
         if (((intval($data["output1"]) + $data["sum"]) ?? 0) > 21) :
             $data["gameover"] = "Game Over";
-        elseif ((intval($data["output1"]) + $data["sum"]) == 21 ) :
+        elseif ((intval($data["output1"]) + $data["sum"]) == 21) :
             $data["gameover"] = "Congratulations, you got 21!";
         endif;
 
@@ -83,15 +82,15 @@ class Game
             $data["sumP"] = intval($_SESSION["test"]);
             if ($data["sum"] > 21) :
                 $data["computer"] = 21 - $data["sumC"];
-            else :
+            elseif ($data["sum"] <= 21) :
                 $data["computer"] = $data["sumC"] - 21;
             endif;
 
             if ($data["sumP"] > 21) :
                 $data["player"] = $data["sumP"] - 21;
-            else :
+            elseif ($data["sumP"] <= 21) :
                 $data["player"] = 21 - $data["sumP"];
-            endif; 
+            endif;
 
             $_SESSION["counterC"] = $_SESSION["counterC"] ?? 0;
             $_SESSION["counterP"] = $_SESSION["counterP"] ?? 0;
@@ -111,5 +110,4 @@ class Game
         $body = renderView("layout/dice.php", $data);
         sendResponse($body);
     }
-
 }

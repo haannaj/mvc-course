@@ -43,7 +43,7 @@ class DiceHand
     public function getLastRoll(): string
     {
         $res = "";
-        for ($i = 0; $i <= (self::HAND) -1 ; $i++) {
+        for ($i = 0; $i <= (self::HAND) - 1; $i++) {
             $res .= $this->dices[$i]->getLastRoll() . " ";
         }
         return $res . " = " . $this->sum;
