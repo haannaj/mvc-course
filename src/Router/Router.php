@@ -59,14 +59,12 @@ class Router
         } else if ($method === "GET" && $path === "/dice") {
             $callable = new \hajh20\Dice\Game();
             $callable->playGame();
-
             return;
         } else if ($method === "POST" && $path === "/dice/process") {
             $_SESSION["output1"] = $_POST["content"] ?? null;
             $_SESSION["round"] = $_POST["content1"] ?? null;
             $_SESSION["test"] = $_POST["computerround"] ?? null;
             redirectTo(url("/dice"));
-
             return;
         } else if ($method === "GET" && $path === "/form/view") {
             $data = [
@@ -76,7 +74,6 @@ class Router
                 "output" => $_SESSION["output"] ?? null,
                 "output1" => $_SESSION["output1"] ?? null,
             ];
-
             $body = renderView("layout/form.php", $data);
             sendResponse($body);
             return;
@@ -84,7 +81,6 @@ class Router
             $_SESSION["output"] = $_POST["content"] ?? null;
             $_SESSION["totalsum"] = $_POST["content3"] ?? null;
             $_SESSION["test"] = $_POST["computerround"] ?? null;
-
             redirectTo(url("/dice"));
             return;
         }

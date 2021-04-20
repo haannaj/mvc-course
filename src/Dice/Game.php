@@ -28,7 +28,7 @@ class Game
             "message" => "Dice",
             "action" => url("/dice/process"),
             "action2" => url("/form/view"),
-            "output" => $_SESSION["output"] ?? null,
+            "output" => $_SESSION["output"],
             "output1" => $_SESSION["output1"] ?? null,
             "computerround" => $_SESSION["test"] ?? null
         ];
