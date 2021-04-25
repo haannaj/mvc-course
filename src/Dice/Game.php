@@ -28,7 +28,7 @@ class Game
             "message" => "Dice",
             "action" => url("/dice/process"),
             "action2" => url("/form/view"),
-            "output" => $_SESSION["output"],
+            "output2" => $_SESSION["output2"] ?? null,
             "output1" => $_SESSION["output1"] ?? null,
             "computerround" => $_SESSION["test"] ?? null
         ];
@@ -47,7 +47,7 @@ class Game
 
         $diegraphic = new GraphicalDice();
         $data["class"] = [];
-        for ($i = 0; $i < $data["output"]; $i++) {
+        for ($i = 0; $i < $_SESSION["output2"]; $i++) {
             $diegraphic->roll();
             array_push($data["class"], $diegraphic->graphic());
         }
@@ -55,7 +55,7 @@ class Game
         $data["rullen"] = 0;
         $data["sum"] = 0;
         $data["kast"] = "";
-        for ($i = 0; $i < $_SESSION["output"]; $i++) {
+        for ($i = 0; $i < $_SESSION["output2"]; $i++) {
             $_SESSION["gamedice"] = new Dice();
             $data["rullen"] = $_SESSION["gamedice"]->roll();
             $data["kast"] .= $data["rullen"] . " ";

@@ -37,3 +37,8 @@ $router->addGroup("/dice", function (RouteCollector $router) {
     $router->addRoute("GET", "", ["\Mos\Controller\Dice", "index"]);
     $router->addRoute("POST", "/process", ["\Mos\Controller\Dice", "process"]);
 });
+
+$router->addGroup("/yatzy", function (RouteCollector $router) {
+    $router->addRoute("GET", "", ["\Mos\Controller\Yatzy", "index"]);
+    $router->addRoute("POST", "/process", ["\Mos\Controller\Yatzy", "process"]);
+});

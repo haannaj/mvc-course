@@ -27,7 +27,7 @@ class Form
             "header" => "Welcome to 21!",
             "message" => "Enter how many dices you want to have:",
             "action" => url("/form/process"),
-            "output" => $_SESSION["output"] ?? null,
+            "output2" => $_SESSION["output2"] ?? null,
             "output1" => $_SESSION["output1"] ?? null,
         ];
 
@@ -41,7 +41,7 @@ class Form
 
     public function process(): ResponseInterface
     {
-        $_SESSION["output"] = $_POST["content"] ?? null;
+        $_SESSION["output2"] = $_POST["content"] ?? null;
         $_SESSION["totalsum"] = $_POST["content3"] ?? null;
         $_SESSION["test"] = $_POST["computerround"] ?? null;
 

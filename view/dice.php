@@ -12,7 +12,7 @@ $_SESSION["totalsum"] = $_SESSION["totalsum"] ?? null;
 <h1><?= $header ?></h1>
 
 <?php if ($computerround == "") : ?>
-    <?php if ($_SESSION["output"] == 2) : ?>
+    <?php if ($_SESSION["output2"] == 2) : ?>
         <h3>Players turn</h3>
         <p class="dice-utf8">
             <i class="dice-<?=$kast[0]?>"></i>

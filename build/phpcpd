@@ -5,7 +5,7 @@ Found 1 clones with 28 duplicated lines in 2 files:
   - /Users/hannajohansson/dbwebb-kurser/mvc/me/game/src/Dice/DiceHand.php:22-50 (28 lines)
     /Users/hannajohansson/dbwebb-kurser/mvc/me/game/src/Dice/GraphicalDice.php:19-47
 
-3.21% duplicated lines out of 871 total lines of code.
+2.67% duplicated lines out of 1047 total lines of code.
 Average size of duplication is 28 lines, largest clone has 28 of lines
 
 Time: 00:00.003, Memory: 2.00 MB

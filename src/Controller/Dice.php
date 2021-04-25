@@ -23,7 +23,14 @@ class Dice
     {
         $callable = new \hajh20\Dice\Game();
         $callable->playGame();
-        return;
+
+        $psr17Factory = new Psr17Factory();
+
+        $body = renderView("layout/dice.php");
+
+        return $psr17Factory
+            ->createResponse(200)
+            ->withBody($psr17Factory->createStream($body));
     }
 
 

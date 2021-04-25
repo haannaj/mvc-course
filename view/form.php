@@ -9,7 +9,7 @@ declare(strict_types=1);
 $header = $header ?? null;
 $message = $message ?? null;
 $action = $action ?? null;
-$output = $output ?? null;
+$output2 = $output2 ?? null;
 $computerround = "";
 $sum = 0;
 
@@ -30,3 +30,5 @@ $sum = 0;
         <input type="submit" value="Start round">
     </p>
 </form>
+
+
