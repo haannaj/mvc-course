@@ -21,13 +21,23 @@ class DiceHand
 {
     private array $dices;
     private int $sum;
-    const HAND = 6;
+    private $hand = 6;
 
     public function __construct()
     {
-        for ($i = 0; $i <= (self::HAND) - 1; $i++) {
+        for ($i = 0; $i <= ($this->hand) - 1; $i++) {
             $this->dices[$i] = new Dice();
         }
+    }
+
+    public function getLength(): int
+    {
+        return $this->hand;
+    }
+
+    public function setLength(int $hand)
+    {
+        $this->hand = $hand;
     }
 
     public function roll(): void
@@ -35,7 +45,7 @@ class DiceHand
         $len = count($this->dices);
 
         $this->sum = 0;
-        for ($i = 0; $i <= (self::HAND) - 1; $i++) {
+        for ($i = 0; $i <= ($this->hand) - 1; $i++) {
             $this->sum += $this->dices[$i]->roll();
         }
     }
@@ -43,9 +53,9 @@ class DiceHand
     public function getLastRoll(): string
     {
         $res = "";
-        for ($i = 0; $i <= (self::HAND) - 1; $i++) {
-            $res .= $this->dices[$i]->getLastRoll() . " ";
+        for ($i = 0; $i <= ($this->hand) - 1; $i++) {
+            $res .= $this->dices[$i]->getLastRoll();
         }
-        return $res . " = " . $this->sum;
+        return $res;
     }
 }

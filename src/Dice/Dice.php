@@ -4,15 +4,6 @@ declare(strict_types=1);
 
 namespace hajh20\Dice;
 
-// use function Mos\Functions\{
-//     destroySession,
-//     redirectTo,
-//     renderView,
-//     renderTwigView,
-//     sendResponse,
-//     url
-// };
-
 /**
  * Class Dice
  */

@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace hajh20\Dice;
 
 use hajh20\Dice\Dice;
-use hajh20\Dice\DiceHand;
 use hajh20\Dice\GraphicalDice;
+use hajh20\Dice\Message;
 
 use function Mos\Functions\{
     redirectTo,
@@ -24,90 +24,101 @@ class Game
     public function playGame(): void
     {
         $data = [
-            "header" => "Game 21",
             "message" => "Dice",
             "action" => url("/dice/process"),
             "action2" => url("/form/view"),
+            "kast" => "",
             "output2" => $_SESSION["output2"] ?? null,
             "output1" => $_SESSION["output1"] ?? null,
             "computerround" => $_SESSION["test"] ?? null
         ];
 
-        $die = new Dice();
-        $die->roll();
-
-        $diceHand = new DiceHand();
-        $diceHand->roll();
-
-        $data["dieLastRoll"] = $die->getLastRoll();
-        $data["diceHandRoll"] = $diceHand->getLastRoll();
-
-        $diceHand->roll();
-        $data["diceHandRoll1"] = $diceHand->getLastRoll();
-
-        $diegraphic = new GraphicalDice();
-        $data["class"] = [];
-        for ($i = 0; $i < $_SESSION["output2"]; $i++) {
-            $diegraphic->roll();
-            array_push($data["class"], $diegraphic->graphic());
-        }
-
-        $data["rullen"] = 0;
+        // Bestäm antal tärningar.
+        $gamedice = new DiceHand();
+        $gamedice->setLength(intval($data["output2"]));
+        $gamedice->roll();
+        $data["kast"] = $gamedice->getLastRoll();
         $data["sum"] = 0;
-        $data["kast"] = "";
-        for ($i = 0; $i < $_SESSION["output2"]; $i++) {
-            $_SESSION["gamedice"] = new Dice();
-            $data["rullen"] = $_SESSION["gamedice"]->roll();
-            $data["kast"] .= $data["rullen"] . " ";
-            $data["sum"] += $data["rullen"];
+        for ($i = 0; $i < strlen($data["kast"]); $i++) {
+            $data["sum"] += intval($data["kast"][$i]);
         }
 
+        // Summera tärningskasten
         $_SESSION["totalsum"] = $data["sum"] + ($_SESSION["totalsum"] ?? 0);
 
+        // Få fram gameover-meddelande
+        $getMessage = new Message();
+        $data["gameover"] = $getMessage->getGameOver21Message($_SESSION["totalsum"]);
 
-        if (((intval($data["output1"]) + $data["sum"]) ?? 0) > 21) :
-            $data["gameover"] = "Game Over";
-        elseif ((intval($data["output1"]) + $data["sum"]) == 21) :
-            $data["gameover"] = "Congratulations, you got 21!";
-        endif;
+        // var_dump($data["computerround"]);
+        $getPoints = new Game();
+        $points = $getPoints->PointsGame($data["computerround"]);
 
-        if ($data["computerround"] !== null && $data["computerround"] !== "") :
-            $data["sumC"] = 0;
-            for ($i = 0; 21 >= $data["sumC"]; $i++) {
-                $_SESSION["gamedice"] = new Dice();
-                $data["rullen"] = $_SESSION["gamedice"]->roll();
-                $data["sumC"] += $data["rullen"];
-            }
+        $data["sumP"] = $points[1];
+        $data["sumC"] = $points[0];
 
-            $data["sumP"] = intval($_SESSION["test"]);
-            if ($data["sum"] > 21) :
-                $data["computer"] = 21 - $data["sumC"];
-            elseif ($data["sum"] <= 21) :
-                $data["computer"] = $data["sumC"] - 21;
-            endif;
+        $getWinner = new Game();
+        $winner = $getWinner->ResultGame($points[2], $points[3]);
 
-            if ($data["sumP"] > 21) :
-                $data["player"] = $data["sumP"] - 21;
-            elseif ($data["sumP"] <= 21) :
-                $data["player"] = 21 - $data["sumP"];
-            endif;
+        $data["result"] = $winner[0];
 
-            $_SESSION["counterC"] = $_SESSION["counterC"] ?? 0;
-            $_SESSION["counterP"] = $_SESSION["counterP"] ?? 0;
-
-            if ($data["computer"] == $data["player"] || $data["computer"] < $data["player"]) :
-                $data["gameover"] = "Computer Won!";
-                $_SESSION["counterC"] += 1;
-            elseif ($data["computer"] > $data["player"]) :
-                $data["gameover"] = "Player won!";
-                $_SESSION["counterP"] += 1;
-            endif;
-        endif;
+        $_SESSION["counterC"] = $_SESSION["counterC"] ?? 0;
+        $_SESSION["counterP"] = $_SESSION["counterP"] ?? 0;
 
         $data["urltest"] = url("/form/view");
         $data["restart"] = url("/session/destroy");
 
         $body = renderView("layout/dice.php", $data);
         sendResponse($body);
+    }
+
+
+    public function PointsGame($playersPoint): array
+    {
+        $playersPoint = intval($playersPoint);
+
+        if ($playersPoint != 0) :
+            $computerPoint = 0;
+
+            // Rulla tärning för computer
+            for ($i = 0; 21 >= $computerPoint; $i++) {
+                $die = new Dice();
+                $rolls = $die->roll();
+                $computerPoint += $rolls;
+            }
+
+            // Summera om Computer eller Player är närmst 21
+            $CP = $computerPoint - 21;
+
+            if ($playersPoint > 21) :
+                $PP = $playersPoint - 21;
+            else :
+                $PP = 21 - $playersPoint;
+            endif; 
+            
+            return [$computerPoint, $playersPoint, $CP, $PP];
+        else: 
+            return [0, 0, "", ""];
+        endif;
+    }
+
+    public function ResultGame($CP, $PP): array
+    {
+        $_SESSION["counterC"] = $_SESSION["counterC"] ?? 0;
+        $_SESSION["counterP"] = $_SESSION["counterP"] ?? 0;
+        
+        // Dela ut poäng
+        if ($PP !== "") :
+            if ($CP == $PP || $CP < $PP) :
+                $message = "Computer Won!";
+                $_SESSION["counterC"] += 1;
+            elseif ($CP > $PP) :
+                $message = "Player won!";
+                $_SESSION["counterP"] += 1;
+            endif;
+            return [$message, $_SESSION["counterP"], $_SESSION["counterC"]];
+        else : 
+            return [""];
+        endif;
     }
 }

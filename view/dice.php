@@ -5,22 +5,26 @@
  */
 
 declare(strict_types=1);
-
+$header = "Game 21";
+$computerround = $computerround ?? null;
+$output2 = $output2 ?? null;
+$kast = $kast ?? "";
+$action = $action ?? null;
 $_SESSION["round"] = $_SESSION["round"] ?? null;
 $_SESSION["totalsum"] = $_SESSION["totalsum"] ?? null;
 ?>
 <h1><?= $header ?></h1>
 
 <?php if ($computerround == "") : ?>
-    <?php if ($_SESSION["output2"] == 2) : ?>
+    <?php if ($output2 == 2) : ?>
         <h3>Players turn</h3>
         <p class="dice-utf8">
             <i class="dice-<?=$kast[0]?>"></i>
-            <i class="dice-<?=$kast[2]?>"></i>
+            <i class="dice-<?=$kast[1]?>"></i>
         </p>
     <?php else : ?>
         <p class="dice-utf8">
-            <i class="dice-<?=$kast[0]?>"></i>
+            <i class="dice-<?=$kast?>"></i>
         </p>
     <?php endif; ?>
     <?php if ($_SESSION["round"] !== null) : ?>
@@ -76,7 +80,7 @@ $_SESSION["totalsum"] = $_SESSION["totalsum"] ?? null;
         </form>
     <?php endif; ?>
 <?php else : ?> 
-    <h3><?= $gameover ?></h3>
+    <h3><?= $result ?></h3>
     <p>Player got: <?= $sumP ?></p>
     <p>Computer got: <?= $sumC ?></p>
 

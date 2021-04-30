@@ -80,7 +80,6 @@ class Router
         } else if ($method === "POST" && $path === "/form/process") {
             $_SESSION["output"] = $_POST["content"] ?? null;
             $_SESSION["totalsum"] = $_POST["content3"] ?? null;
-            $_SESSION["test"] = $_POST["computerround"] ?? null;
             redirectTo(url("/dice"));
             return;
         }

@@ -19,12 +19,11 @@ use Twig\Environment;
  */
 function getRoutePath(): string
 {
-    $offset = strlen(dirname($_SERVER["SCRIPT_NAME"]));
-    $path   = substr($_SERVER["REQUEST_URI"], $offset);
+    $offset = strlen(dirname($_SERVER["SCRIPT_NAME"] ?? null));
+    $path   = substr($_SERVER["REQUEST_URI"] ?? "", $offset);
 
-    return $path;
+    return $path ? $path : "";
 }
-
 
 
 /**
@@ -139,14 +138,16 @@ function getBaseUrl()
         return $baseUrl;
     }
 
-    $scriptName = rawurldecode($_SERVER["SCRIPT_NAME"]);
+    $scriptName = rawurldecode($_SERVER["SCRIPT_NAME"] ?? null);
     $path = rtrim(dirname($scriptName), "/");
 
     // Prepare to create baseUrl by using currentUrl
     $parts = parse_url(getCurrentUrl());
 
     // Build the base url from its parts
-    $siteUrl = "{$parts["scheme"]}://{$parts["host"]}"
+    $siteUrl = ($parts["scheme"] ?? null)
+        . "://"
+        . ($parts["host"] ?? null)
         . (isset($parts["port"])
             ? ":{$parts["port"]}"
             : "");
@@ -155,8 +156,6 @@ function getBaseUrl()
     return $baseUrl;
 }
 
-
-
 /**
  * Get the current url of the request.
  *
@@ -164,17 +163,17 @@ function getBaseUrl()
  */
 function getCurrentUrl(): string
 {
-    $scheme = $_SERVER["REQUEST_SCHEME"];
-    $server = $_SERVER["SERVER_NAME"];
+    $scheme = $_SERVER["REQUEST_SCHEME"] ?? "";
+    $server = $_SERVER["SERVER_NAME"] ?? "";
 
-    $port  = $_SERVER["SERVER_PORT"];
+    $port  = $_SERVER["SERVER_PORT"] ?? "";
     $port  = ($port === "80")
         ? ""
-        : (($port === 443 && $_SERVER["HTTPS"] === "on")
+        : (($port === 443 && ($_SERVER["HTTPS"] ?? null) === "on")
             ? ""
             : ":" . $port);
 
-    $uri = rtrim(rawurldecode($_SERVER["REQUEST_URI"]), "/");
+    $uri = rtrim(rawurldecode($_SERVER["REQUEST_URI"] ?? ""), "/");
 
     $url  = htmlspecialchars($scheme) . "://";
     $url .= htmlspecialchars($server)
@@ -182,6 +181,7 @@ function getCurrentUrl(): string
 
     return $url;
 }
+
 
 
 

@@ -20,11 +20,10 @@ use function Mos\Functions\{
  */
 class Yatzy
 {
-    public function index() : ResponseInterface
+    public function index(): ResponseInterface
     {
         $callable = new \hajh20\Dice\YatzyClass();
         $callable->playYatzy();
-
         $psr17Factory = new Psr17Factory();
 
         $body = renderView("layout/yatzy.php");
@@ -42,12 +41,12 @@ class Yatzy
         $_SESSION["dice4"] = $_POST["dice4"] ?? null;
         $_SESSION["dice5"] = $_POST["dice5"] ?? null;
         $_SESSION["counterYatzy"] = $_POST["counterYatzy"] ?? null;
-        $_SESSION["sumEtt"] = $_POST["sumEtt"] ?? null;
-        $_SESSION["sumTva"] = $_POST["sumTva"] ?? null;
-        $_SESSION["sumTre"] = $_POST["sumTre"] ?? null;
-        $_SESSION["sumFyra"] = $_POST["sumFyra"] ?? null;
-        $_SESSION["sumFem"] = $_POST["sumFem"] ?? null;
-        $_SESSION["sumSex"] = $_POST["sumSex"] ?? null;
+        $_SESSION["sum3"] = $_POST["sum3"] ?? null;
+        $_SESSION["sum6"] = $_POST["sum6"] ?? null;
+        $_SESSION["sum9"] = $_POST["sum9"] ?? null;
+        $_SESSION["sum12"] = $_POST["sum12"] ?? null;
+        $_SESSION["sum15"] = $_POST["sum15"] ?? null;
+        $_SESSION["sum18"] = $_POST["sum18"] ?? null;
 
         return (new Response())
             ->withStatus(301)

@@ -15,11 +15,11 @@ use function Mos\Functions\{
 };
 
 /**
- * Controller for the session routes.
+ * Controller for the dice routes.
  */
 class Dice
 {
-    public function index()
+    public function index(): ResponseInterface
     {
         $callable = new \hajh20\Dice\Game();
         $callable->playGame();
