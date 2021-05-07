@@ -5,6 +5,7 @@
  */
 
 declare(strict_types=1);
+
 $header = "Game 21";
 $computerround = $computerround ?? null;
 $output2 = $output2 ?? null;

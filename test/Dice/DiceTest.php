@@ -20,7 +20,7 @@ class DiceTest extends TestCase
         $test = new DiceHand();
         $test->roll();
         $res = $test->getLastRoll();
-    
+
         $exp = $test->getLength();
         $this->assertEquals($exp, strlen($res));
     }
@@ -34,7 +34,4 @@ class DiceTest extends TestCase
         $exp = 6;
         $this->assertEquals($exp, strlen($res));
     }
-
 }
-
-

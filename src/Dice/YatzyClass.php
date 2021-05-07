@@ -52,7 +52,6 @@ class YatzyClass
         // Fixa meddelande på knapp
         $mess = new Message();
         $data["diceMessage"] = $mess->diceMessageYatzy($data["countY"]);
-        
 
         // Förbered för att summera tärningar
         $data["sumUp"] = [];
@@ -76,7 +75,7 @@ class YatzyClass
             $data["totSumYatzy"] = $data["sum3"] + $data["sum6"] + $data["sum9"] + $data["sum12"] + $data["sum15"] + $data["sum18"];
         endif;
 
-        // Kalkylera bonus 
+        // Kalkylera bonus
         $bonus = new Bonus();
         $data["bonusYatzy"] = $bonus->bonus($data["totSumYatzy"]);
 
@@ -89,7 +88,7 @@ class YatzyClass
     private $sumUp = [];
 
     public function sumUpDices($counter, $sumUp): int
-    {   
+    {
         $sumEtt = 0;
         $sumTva = 0;
         $sumTre = 0;
@@ -139,9 +138,8 @@ class YatzyClass
                 endif;
             };
             return $sumSex;
-        else : 
+        else :
             return 0;
         endif;
-
     }
 }

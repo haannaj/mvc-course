@@ -50,15 +50,14 @@ class Game
         $getMessage = new Message();
         $data["gameover"] = $getMessage->getGameOver21Message($_SESSION["totalsum"]);
 
-        // var_dump($data["computerround"]);
         $getPoints = new Game();
-        $points = $getPoints->PointsGame($data["computerround"]);
+        $points = $getPoints->pointsGame($data["computerround"]);
 
         $data["sumP"] = $points[1];
         $data["sumC"] = $points[0];
 
         $getWinner = new Game();
-        $winner = $getWinner->ResultGame($points[2], $points[3]);
+        $winner = $getWinner->resultGame($points[2], $points[3]);
 
         $data["result"] = $winner[0];
 
@@ -73,7 +72,7 @@ class Game
     }
 
 
-    public function PointsGame($playersPoint): array
+    public function pointsGame($playersPoint): array
     {
         $playersPoint = intval($playersPoint);
 
@@ -94,30 +93,30 @@ class Game
                 $PP = $playersPoint - 21;
             else :
                 $PP = 21 - $playersPoint;
-            endif; 
-            
+            endif;
+
             return [$computerPoint, $playersPoint, $CP, $PP];
-        else: 
+        else :
             return [0, 0, "", ""];
         endif;
     }
 
-    public function ResultGame($CP, $PP): array
+    public function resultGame($CP, $PP): array
     {
         $_SESSION["counterC"] = $_SESSION["counterC"] ?? 0;
         $_SESSION["counterP"] = $_SESSION["counterP"] ?? 0;
-        
+
         // Dela ut poäng
         if ($PP !== "") :
             if ($CP == $PP || $CP < $PP) :
                 $message = "Computer Won!";
                 $_SESSION["counterC"] += 1;
-            elseif ($CP > $PP) :
+            else :
                 $message = "Player won!";
                 $_SESSION["counterP"] += 1;
             endif;
             return [$message, $_SESSION["counterP"], $_SESSION["counterC"]];
-        else : 
+        else :
             return [""];
         endif;
     }

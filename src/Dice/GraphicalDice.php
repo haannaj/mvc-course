@@ -19,7 +19,7 @@ class GraphicalDice extends DiceHand
      */
     public function __construct()
     {
-        parent::__construct(self::SIDES);
+        parent::__construct();
     }
 
     public function graphic()

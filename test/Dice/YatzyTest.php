@@ -15,7 +15,7 @@ class YatzyTest extends TestCase
     public function testGetBonusClass()
     {
         $test = new Bonus();
-        
+
         $res = $test->bonus(63);
         $exp = 50;
         $this->assertEquals($exp, $res);
@@ -91,9 +91,5 @@ class YatzyTest extends TestCase
         $res = $test->sumUpDices("18", $sumUp);
         $exp = 12;
         $this->assertEquals($exp, $res);
-
     }
-
 }
-
-

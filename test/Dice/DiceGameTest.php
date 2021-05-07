@@ -18,11 +18,11 @@ class DiceGameTest extends TestCase
         $test->setLength(4);
         $test->roll();
         $res = $test->getLastRoll();
-    
+
         $exp = 4;
         $this->assertEquals($exp, strlen($res));
     }
-    
+
     public function testMessageGame21()
     {
         $test = new Message();
@@ -58,8 +58,5 @@ class DiceGameTest extends TestCase
         $res = $test->ResultGame(25, 22);
         $exp = "Player won!";
         $this->assertEquals($exp, $res[0]);
-
     }
 }
-
-

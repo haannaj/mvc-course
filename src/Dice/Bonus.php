@@ -10,7 +10,6 @@ namespace hajh20\Dice;
 class Bonus
 {
     private int $totSum = 0;
-
     public function bonus(int $totSum): int
     {
         if (63 <= $totSum) :
@@ -19,5 +18,4 @@ class Bonus
             return 0;
         endif;
     }
-
 }

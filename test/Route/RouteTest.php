@@ -25,11 +25,8 @@ class RouteTest extends TestCase
         $test = new Router();
         $res = $test->dispatch("GET", "/twig");
         $this->assertEmpty($res);
-        
         $test = new Router();
         $res = $test->dispatch("GET", "/some/where");
         $this->assertEmpty($res);
-
     }
-    
 }

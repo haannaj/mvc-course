@@ -84,20 +84,20 @@ PHPUnit 9.5.4 by Sebastian Bergmann and contributors.
   <form method="post" action="://./yatzy/process">
       <p>Välj vilka tärningar du vill behålla, kasta därefter tärningarna igen.</p>
 
-                <input type="checkbox" name="dice1" value="6">
-          <label>6</label>
+                <input type="checkbox" name="dice1" value="2">
+          <label>2</label>
       
-                <input type="checkbox" name="dice2" value="5">
-          <label>5</label>
-      
-                <input type="checkbox" name="dice3" value="6">
-          <label>6</label>
-      
-                <input type="checkbox" name="dice4" value="3">
-          <label>3</label>
-      
-                <input type="checkbox" name="dice5" value="4">
+                <input type="checkbox" name="dice2" value="4">
           <label>4</label>
+      
+                <input type="checkbox" name="dice3" value="1">
+          <label>1</label>
+      
+                <input type="checkbox" name="dice4" value="2">
+          <label>2</label>
+      
+                <input type="checkbox" name="dice5" value="3">
+          <label>3</label>
       
       <p>
           <input type="hidden" name="counterYatzy" value="1"/>
@@ -230,11 +230,11 @@ array(34) {
   ["TERM_PROGRAM_VERSION"]=>
   string(3) "440"
   ["TERM_SESSION_ID"]=>
-  string(36) "0A672385-796F-42F5-B183-9BAEF579CC78"
+  string(36) "94D736EB-518D-478B-A109-AE184C5E75E0"
   ["USER"]=>
   string(14) "hannajohansson"
   ["SSH_AUTH_SOCK"]=>
-  string(51) "/private/tmp/com.apple.launchd.fqOrIaRClS/Listeners"
+  string(51) "/private/tmp/com.apple.launchd.PTen7oiC0b/Listeners"
   ["__CF_USER_TEXT_ENCODING"]=>
   string(13) "0x1F5:0x0:0x7"
   ["MAKELEVEL"]=>
@@ -242,9 +242,9 @@ array(34) {
   ["MFLAGS"]=>
   string(0) ""
   ["PATH"]=>
-  string(70) "/Users/hannajohansson/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+  string(93) "/Users/hannajohansson/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin"
   ["LaunchInstanceID"]=>
-  string(36) "2EF23F92-B697-4B19-BB62-5302A8D8FCF0"
+  string(36) "784A5E78-01C0-4FD5-A3C0-01B8BBBC8511"
   ["__CFBundleIdentifier"]=>
   string(18) "com.apple.Terminal"
   ["PWD"]=>
@@ -276,9 +276,9 @@ array(34) {
   ["DOCUMENT_ROOT"]=>
   string(0) ""
   ["REQUEST_TIME_FLOAT"]=>
-  float(1619781086.685067)
+  float(1620373742.797459)
   ["REQUEST_TIME"]=>
-  int(1619781086)
+  int(1620373742)
   ["argv"]=>
   array(3) {
     [0]=>
@@ -335,10 +335,10 @@ array(34) {
 </html>
 
 
-Time: 00:02.305, Memory: 24.00 MB
+Time: 00:02.207, Memory: 24.00 MB
 
 OK (41 tests, 58 assertions)
 
-Generating code coverage report in Clover XML format ... done [00:00.020]
+Generating code coverage report in Clover XML format ... done [00:00.018]
 
-Generating code coverage report in HTML format ... done [00:00.116]
+Generating code coverage report in HTML format ... done [00:00.072]
