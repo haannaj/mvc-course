@@ -87,20 +87,20 @@ Suggestion:    Migrate your XML configuration using "--migrate-configuration"!
   <form method="post" action="://./yatzy/process">
       <p>Välj vilka tärningar du vill behålla, kasta därefter tärningarna igen.</p>
 
-                <input type="checkbox" name="dice1" value="6">
-          <label>6</label>
-      
-                <input type="checkbox" name="dice2" value="2">
-          <label>2</label>
-      
-                <input type="checkbox" name="dice3" value="5">
-          <label>5</label>
-      
-                <input type="checkbox" name="dice4" value="3">
+                <input type="checkbox" name="dice1" value="3">
           <label>3</label>
       
-                <input type="checkbox" name="dice5" value="5">
+                <input type="checkbox" name="dice2" value="4">
+          <label>4</label>
+      
+                <input type="checkbox" name="dice3" value="4">
+          <label>4</label>
+      
+                <input type="checkbox" name="dice4" value="5">
           <label>5</label>
+      
+                <input type="checkbox" name="dice5" value="1">
+          <label>1</label>
       
       <p>
           <input type="hidden" name="counterYatzy" value="1"/>
@@ -275,9 +275,9 @@ array(32) {
   ["DOCUMENT_ROOT"]=>
   string(0) ""
   ["REQUEST_TIME_FLOAT"]=>
-  float(1621508464.086352)
+  float(1621509977.125684)
   ["REQUEST_TIME"]=>
-  int(1621508464)
+  int(1621509977)
   ["argv"]=>
   array(3) {
     [0]=>
@@ -334,10 +334,10 @@ array(32) {
 </html>
 
 
-Time: 00:02.233, Memory: 24.00 MB
+Time: 00:02.198, Memory: 24.00 MB
 
 OK (41 tests, 58 assertions)
 
 Generating code coverage report in Clover XML format ... done [00:00.008]
 
-Generating code coverage report in HTML format ... done [00:00.065]
+Generating code coverage report in HTML format ... done [00:00.064]

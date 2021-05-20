@@ -1,12 +1,3 @@
- ------ ------------------------------------------------------------------------- 
-  Line   config/di/db.php                                                         
- ------ ------------------------------------------------------------------------- 
-  11     Instantiated class Anax\Database\Database not found.                     
-         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols       
-  14     Undefined variable: $this                                                
-  19     Call to method setOptions() on an unknown class Anax\Database\Database.  
-         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols       
- ------ ------------------------------------------------------------------------- 
 
- [ERROR] Found 3 errors                                                                                                 
+ [OK] No errors                                                                                                         
 

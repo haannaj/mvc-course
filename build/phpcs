@@ -1,15 +1,4 @@
 
-FILE: /Users/hannajohansson/dbwebb-kurser/mvc/me/ci/config/di/db.php
-------------------------------------------------------------------------
-FOUND 2 ERRORS AFFECTING 2 LINES
-------------------------------------------------------------------------
- 1 | ERROR | [x] Header blocks must be separated by a single blank line
- 4 | ERROR | [x] Header blocks must be separated by a single blank line
-------------------------------------------------------------------------
-PHPCBF CAN FIX THE 2 MARKED SNIFF VIOLATIONS AUTOMATICALLY
-------------------------------------------------------------------------
-
-
 FILE: /Users/hannajohansson/dbwebb-kurser/mvc/me/ci/config/database.php
 -------------------------------------------------------------------------
 FOUND 2 ERRORS AFFECTING 2 LINES
@@ -20,5 +9,5 @@ FOUND 2 ERRORS AFFECTING 2 LINES
 PHPCBF CAN FIX THE 2 MARKED SNIFF VIOLATIONS AUTOMATICALLY
 -------------------------------------------------------------------------
 
-Time: 645ms; Memory: 8MB
+Time: 575ms; Memory: 8MB
 
