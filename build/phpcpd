@@ -1,11 +1,5 @@
 phpcpd 6.0.3 by Sebastian Bergmann.
 
-Found 1 clones with 28 duplicated lines in 2 files:
+No clones found.
 
-  - /Users/hannajohansson/dbwebb-kurser/mvc/me/game/src/Dice/DiceHand.php:22-50 (28 lines)
-    /Users/hannajohansson/dbwebb-kurser/mvc/me/game/src/Dice/GraphicalDice.php:19-47
-
-5.00% duplicated lines out of 560 total lines of code.
-Average size of duplication is 28 lines, largest clone has 28 of lines
-
-Time: 00:00.002, Memory: 2.00 MB
+Time: 00:00.008, Memory: 2.00 MB
