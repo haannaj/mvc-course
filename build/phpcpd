@@ -2,4 +2,14 @@ phpcpd 6.0.3 by Sebastian Bergmann.
 
 No clones found.
 
+<<<<<<< HEAD
 Time: 00:00.008, Memory: 2.00 MB
+=======
+  - /Users/hannajohansson/dbwebb-kurser/mvc/me/ci/src/Dice/DiceHand.php:22-50 (28 lines)
+    /Users/hannajohansson/dbwebb-kurser/mvc/me/ci/src/Dice/GraphicalDice.php:19-47
+
+5.00% duplicated lines out of 560 total lines of code.
+Average size of duplication is 28 lines, largest clone has 28 of lines
+
+Time: 00:00.005, Memory: 2.00 MB
+>>>>>>> f59f95477b4414cdce188d40edee43342b3e9b6a
