@@ -13,6 +13,7 @@
         "phpstan/phpstan": "^0.12"
     },
     "require": {
-        "twig/twig": "^3.3"
+        "twig/twig": "^3.3",
+        "anax/database": "^2.3"
     }
 }

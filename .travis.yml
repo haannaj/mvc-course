@@ -1,0 +1,12 @@
+language: php
+php: 7.3
+before_install:
+  - composer self-update
+cache:
+  directories: $HOME/.composer/cache
+before_script:
+  - composer update --no-interaction --dev
+
+script:
+  - php vendor/bin/phpunit --coverage-clover=coverage.xml
+after_success: bash <(curl -s https://codecov.io/bash)
