@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1621506765">
-  <project timestamp="1621506765">
+<coverage generated="1621507649">
+  <project timestamp="1621507649">
     <file name="/Users/hannajohansson/dbwebb-kurser/mvc/me/ci/src/Controller/Debug.php">
       <class name="Mos\Controller\Debug" namespace="global">
         <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="5" coveredelements="5"/>

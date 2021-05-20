@@ -87,8 +87,8 @@ Suggestion:    Migrate your XML configuration using "--migrate-configuration"!
   <form method="post" action="://./yatzy/process">
       <p>Välj vilka tärningar du vill behålla, kasta därefter tärningarna igen.</p>
 
-                <input type="checkbox" name="dice1" value="6">
-          <label>6</label>
+                <input type="checkbox" name="dice1" value="3">
+          <label>3</label>
       
                 <input type="checkbox" name="dice2" value="5">
           <label>5</label>
@@ -96,11 +96,11 @@ Suggestion:    Migrate your XML configuration using "--migrate-configuration"!
                 <input type="checkbox" name="dice3" value="4">
           <label>4</label>
       
-                <input type="checkbox" name="dice4" value="5">
-          <label>5</label>
+                <input type="checkbox" name="dice4" value="1">
+          <label>1</label>
       
-                <input type="checkbox" name="dice5" value="3">
-          <label>3</label>
+                <input type="checkbox" name="dice5" value="2">
+          <label>2</label>
       
       <p>
           <input type="hidden" name="counterYatzy" value="1"/>
@@ -217,7 +217,7 @@ Suggestion:    Migrate your XML configuration using "--migrate-configuration"!
 <h1>Debug details</h1>string(13) "://vendor/bin"
 string(4) "://:"
 string(0) ""
-array(34) {
+array(32) {
   ["XDEBUG_MODE"]=>
   string(8) "coverage"
   ["TERM_PROGRAM"]=>
@@ -233,7 +233,7 @@ array(34) {
   ["TERM_PROGRAM_VERSION"]=>
   string(3) "440"
   ["TERM_SESSION_ID"]=>
-  string(36) "4FDB1DD0-4697-4EA3-B3CC-12FE09D2C65F"
+  string(36) "B2217C56-E5AB-40B6-8CA4-3C753AE71FC7"
   ["USER"]=>
   string(14) "hannajohansson"
   ["SSH_AUTH_SOCK"]=>
@@ -246,8 +246,6 @@ array(34) {
   string(0) ""
   ["PATH"]=>
   string(93) "/Users/hannajohansson/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin"
-  ["LaunchInstanceID"]=>
-  string(36) "900248A3-56A3-45BD-848D-A57254F733BF"
   ["__CFBundleIdentifier"]=>
   string(18) "com.apple.Terminal"
   ["PWD"]=>
@@ -264,8 +262,6 @@ array(34) {
   string(21) "/Users/hannajohansson"
   ["LOGNAME"]=>
   string(14) "hannajohansson"
-  ["SECURITYSESSIONID"]=>
-  string(5) "186a9"
   ["_"]=>
   string(18) "vendor/bin/phpunit"
   ["PHP_SELF"]=>
@@ -279,9 +275,9 @@ array(34) {
   ["DOCUMENT_ROOT"]=>
   string(0) ""
   ["REQUEST_TIME_FLOAT"]=>
-  float(1621506762.74798)
+  float(1621507647.533883)
   ["REQUEST_TIME"]=>
-  int(1621506762)
+  int(1621507647)
   ["argv"]=>
   array(3) {
     [0]=>
@@ -338,10 +334,10 @@ array(34) {
 </html>
 
 
-Time: 00:02.333, Memory: 24.00 MB
+Time: 00:02.267, Memory: 24.00 MB
 
 OK (41 tests, 58 assertions)
 
-Generating code coverage report in Clover XML format ... done [00:00.007]
+Generating code coverage report in Clover XML format ... done [00:00.008]
 
-Generating code coverage report in HTML format ... done [00:00.077]
+Generating code coverage report in HTML format ... done [00:00.068]

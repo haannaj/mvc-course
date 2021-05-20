@@ -463,7 +463,6 @@
             ],
             "authors": [
                 {
-<<<<<<< HEAD
                     "name": "PHP-FIG",
                     "homepage": "http://www.php-fig.org/"
                 }
@@ -485,24 +484,6 @@
                 "source": "https://github.com/php-fig/http-server-handler/tree/master"
             },
             "time": "2018-10-30T16:46:14+00:00"
-=======
-                    "name": "Mikael Roos",
-                    "email": "mos@dbwebb.se"
-                }
-            ],
-            "description": "Anax Database module, to work with databases.",
-            "homepage": "https://dbwebb.se/anax",
-            "keywords": [
-                "Database Access Layer",
-                "database",
-                "dba"
-            ],
-            "support": {
-                "issues": "https://github.com/canax/database/issues",
-                "source": "https://github.com/canax/database/tree/v2.3.1"
-            },
-            "time": "2020-10-23T13:02:25+00:00"
->>>>>>> f59f95477b4414cdce188d40edee43342b3e9b6a
         },
         {
             "name": "symfony/polyfill-ctype",
