@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1620373745">
-  <project timestamp="1620373745">
-    <file name="/Users/hannajohansson/dbwebb-kurser/mvc/me/game/config/bootstrap.php">
+<coverage generated="1621498648">
+  <project timestamp="1621498648">
+    <file name="/Users/hannajohansson/dbwebb-kurser/mvc/me/ci/config/bootstrap.php">
       <line num="10" type="stmt" count="1"/>
       <line num="11" type="stmt" count="1"/>
       <line num="14" type="stmt" count="1"/>
@@ -9,7 +9,7 @@
       <line num="16" type="stmt" count="0"/>
       <metrics loc="17" ncloc="10" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="3" elements="5" coveredelements="3"/>
     </file>
-    <file name="/Users/hannajohansson/dbwebb-kurser/mvc/me/game/config/router.php">
+    <file name="/Users/hannajohansson/dbwebb-kurser/mvc/me/ci/config/router.php">
       <line num="13" type="stmt" count="0"/>
       <line num="14" type="stmt" count="0"/>
       <line num="15" type="stmt" count="0"/>
@@ -40,7 +40,7 @@
       <line num="49" type="stmt" count="0"/>
       <metrics loc="49" ncloc="43" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="28" coveredstatements="0" elements="28" coveredelements="0"/>
     </file>
-    <file name="/Users/hannajohansson/dbwebb-kurser/mvc/me/game/src/Controller/Debug.php">
+    <file name="/Users/hannajohansson/dbwebb-kurser/mvc/me/ci/src/Controller/Debug.php">
       <class name="Mos\Controller\Debug" namespace="global">
         <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="5" coveredelements="5"/>
       </class>
@@ -51,7 +51,7 @@
       <line num="24" type="stmt" count="1"/>
       <metrics loc="26" ncloc="23" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="5" coveredelements="5"/>
     </file>
-    <file name="/Users/hannajohansson/dbwebb-kurser/mvc/me/game/src/Controller/Dice.php">
+    <file name="/Users/hannajohansson/dbwebb-kurser/mvc/me/ci/src/Controller/Dice.php">
       <class name="Mos\Controller\Dice" namespace="global">
         <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="12" elements="14" coveredelements="14"/>
       </class>
@@ -71,7 +71,7 @@
       <line num="45" type="stmt" count="1"/>
       <metrics loc="47" ncloc="44" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="12" elements="14" coveredelements="14"/>
     </file>
-    <file name="/Users/hannajohansson/dbwebb-kurser/mvc/me/game/src/Controller/Error.php">
+    <file name="/Users/hannajohansson/dbwebb-kurser/mvc/me/ci/src/Controller/Error.php">
       <class name="Mos\Controller\Error" namespace="global">
         <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="12" elements="14" coveredelements="14"/>
       </class>
@@ -91,7 +91,7 @@
       <line num="49" type="stmt" count="1"/>
       <metrics loc="51" ncloc="48" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="12" elements="14" coveredelements="14"/>
     </file>
-    <file name="/Users/hannajohansson/dbwebb-kurser/mvc/me/game/src/Controller/Form.php">
+    <file name="/Users/hannajohansson/dbwebb-kurser/mvc/me/ci/src/Controller/Form.php">
       <class name="Mos\Controller\Form" namespace="global">
         <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="16" coveredstatements="16" elements="18" coveredelements="18"/>
       </class>
@@ -115,7 +115,7 @@
       <line num="50" type="stmt" count="1"/>
       <metrics loc="52" ncloc="49" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="16" coveredstatements="16" elements="18" coveredelements="18"/>
     </file>
-    <file name="/Users/hannajohansson/dbwebb-kurser/mvc/me/game/src/Controller/Index.php">
+    <file name="/Users/hannajohansson/dbwebb-kurser/mvc/me/ci/src/Controller/Index.php">
       <class name="Mos\Controller\Index" namespace="global">
         <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="6" coveredelements="6"/>
       </class>
@@ -127,7 +127,7 @@
       <line num="30" type="stmt" count="1"/>
       <metrics loc="32" ncloc="29" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="6" coveredelements="6"/>
     </file>
-    <file name="/Users/hannajohansson/dbwebb-kurser/mvc/me/game/src/Controller/Sample.php">
+    <file name="/Users/hannajohansson/dbwebb-kurser/mvc/me/ci/src/Controller/Sample.php">
       <class name="Mos\Controller\Sample" namespace="global">
         <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="6" coveredelements="6"/>
       </class>
@@ -139,7 +139,7 @@
       <line num="30" type="stmt" count="1"/>
       <metrics loc="32" ncloc="29" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="6" coveredelements="6"/>
     </file>
-    <file name="/Users/hannajohansson/dbwebb-kurser/mvc/me/game/src/Controller/Session.php">
+    <file name="/Users/hannajohansson/dbwebb-kurser/mvc/me/ci/src/Controller/Session.php">
       <class name="Mos\Controller\Session" namespace="global">
         <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="8" elements="10" coveredelements="10"/>
       </class>
@@ -155,7 +155,7 @@
       <line num="41" type="stmt" count="1"/>
       <metrics loc="43" ncloc="40" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="8" elements="10" coveredelements="10"/>
     </file>
-    <file name="/Users/hannajohansson/dbwebb-kurser/mvc/me/game/src/Controller/TwigView.php">
+    <file name="/Users/hannajohansson/dbwebb-kurser/mvc/me/ci/src/Controller/TwigView.php">
       <class name="Mos\Controller\TwigView" namespace="global">
         <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="6" coveredelements="6"/>
       </class>
@@ -167,7 +167,7 @@
       <line num="30" type="stmt" count="1"/>
       <metrics loc="32" ncloc="29" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="6" coveredelements="6"/>
     </file>
-    <file name="/Users/hannajohansson/dbwebb-kurser/mvc/me/game/src/Controller/Yatzy.php">
+    <file name="/Users/hannajohansson/dbwebb-kurser/mvc/me/ci/src/Controller/Yatzy.php">
       <class name="Mos\Controller\Yatzy" namespace="global">
         <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="21" coveredstatements="21" elements="23" coveredelements="23"/>
       </class>
@@ -196,7 +196,7 @@
       <line num="53" type="stmt" count="1"/>
       <metrics loc="55" ncloc="52" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="21" coveredstatements="21" elements="23" coveredelements="23"/>
     </file>
-    <file name="/Users/hannajohansson/dbwebb-kurser/mvc/me/game/src/Dice/Bonus.php">
+    <file name="/Users/hannajohansson/dbwebb-kurser/mvc/me/ci/src/Dice/Bonus.php">
       <class name="hajh20\Dice\Bonus" namespace="global">
         <metrics complexity="2" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
       </class>
@@ -206,7 +206,7 @@
       <line num="18" type="stmt" count="1"/>
       <metrics loc="21" ncloc="18" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
     </file>
-    <file name="/Users/hannajohansson/dbwebb-kurser/mvc/me/game/src/Dice/Dice.php">
+    <file name="/Users/hannajohansson/dbwebb-kurser/mvc/me/ci/src/Dice/Dice.php">
       <class name="hajh20\Dice\Dice" namespace="global">
         <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="5" coveredelements="5"/>
       </class>
@@ -217,7 +217,7 @@
       <line num="23" type="stmt" count="4"/>
       <metrics loc="25" ncloc="22" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="5" coveredelements="5"/>
     </file>
-    <file name="/Users/hannajohansson/dbwebb-kurser/mvc/me/game/src/Dice/DiceHand.php">
+    <file name="/Users/hannajohansson/dbwebb-kurser/mvc/me/ci/src/Dice/DiceHand.php">
       <class name="hajh20\Dice\DiceHand" namespace="global">
         <metrics complexity="8" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="15" elements="20" coveredelements="20"/>
       </class>
@@ -243,7 +243,7 @@
       <line num="59" type="stmt" count="4"/>
       <metrics loc="61" ncloc="50" classes="1" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="15" elements="20" coveredelements="20"/>
     </file>
-    <file name="/Users/hannajohansson/dbwebb-kurser/mvc/me/game/src/Dice/Game.php">
+    <file name="/Users/hannajohansson/dbwebb-kurser/mvc/me/ci/src/Dice/Game.php">
       <class name="hajh20\Dice\Game" namespace="global">
         <metrics complexity="10" methods="3" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="55" coveredstatements="54" elements="58" coveredelements="56"/>
       </class>
@@ -307,7 +307,7 @@
       <line num="120" type="stmt" count="1"/>
       <metrics loc="123" ncloc="114" classes="1" methods="3" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="55" coveredstatements="54" elements="58" coveredelements="56"/>
     </file>
-    <file name="/Users/hannajohansson/dbwebb-kurser/mvc/me/game/src/Dice/GraphicalDice.php">
+    <file name="/Users/hannajohansson/dbwebb-kurser/mvc/me/ci/src/Dice/GraphicalDice.php">
       <class name="hajh20\Dice\GraphicalDice" namespace="global">
         <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="5" coveredelements="5"/>
       </class>
@@ -318,7 +318,7 @@
       <line num="27" type="stmt" count="1"/>
       <metrics loc="29" ncloc="20" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="5" coveredelements="5"/>
     </file>
-    <file name="/Users/hannajohansson/dbwebb-kurser/mvc/me/game/src/Dice/Message.php">
+    <file name="/Users/hannajohansson/dbwebb-kurser/mvc/me/ci/src/Dice/Message.php">
       <class name="hajh20\Dice\Message" namespace="global">
         <metrics complexity="10" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="18" coveredstatements="18" elements="20" coveredelements="20"/>
       </class>
@@ -344,7 +344,7 @@
       <line num="41" type="stmt" count="1"/>
       <metrics loc="44" ncloc="41" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="18" coveredstatements="18" elements="20" coveredelements="20"/>
     </file>
-    <file name="/Users/hannajohansson/dbwebb-kurser/mvc/me/game/src/Dice/YatzyClass.php">
+    <file name="/Users/hannajohansson/dbwebb-kurser/mvc/me/ci/src/Dice/YatzyClass.php">
       <class name="hajh20\Dice\YatzyClass" namespace="global">
         <metrics complexity="30" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="78" coveredstatements="73" elements="80" coveredelements="74"/>
       </class>
@@ -430,7 +430,7 @@
       <line num="142" type="stmt" count="1"/>
       <metrics loc="145" ncloc="136" classes="1" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="78" coveredstatements="73" elements="80" coveredelements="74"/>
     </file>
-    <file name="/Users/hannajohansson/dbwebb-kurser/mvc/me/game/src/Router/Router.php">
+    <file name="/Users/hannajohansson/dbwebb-kurser/mvc/me/ci/src/Router/Router.php">
       <class name="Mos\Router\Router" namespace="global">
         <metrics complexity="21" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="56" coveredstatements="21" elements="57" coveredelements="21"/>
       </class>
@@ -493,7 +493,7 @@
       <line num="92" type="stmt" count="0"/>
       <metrics loc="93" ncloc="90" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="56" coveredstatements="21" elements="57" coveredelements="21"/>
     </file>
-    <file name="/Users/hannajohansson/dbwebb-kurser/mvc/me/game/src/functions.php">
+    <file name="/Users/hannajohansson/dbwebb-kurser/mvc/me/ci/src/functions.php">
       <line num="22" type="stmt" count="3"/>
       <line num="23" type="stmt" count="3"/>
       <line num="25" type="stmt" count="3"/>

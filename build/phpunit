@@ -84,20 +84,20 @@ PHPUnit 9.5.4 by Sebastian Bergmann and contributors.
   <form method="post" action="://./yatzy/process">
       <p>Välj vilka tärningar du vill behålla, kasta därefter tärningarna igen.</p>
 
-                <input type="checkbox" name="dice1" value="2">
-          <label>2</label>
+                <input type="checkbox" name="dice1" value="6">
+          <label>6</label>
       
-                <input type="checkbox" name="dice2" value="4">
-          <label>4</label>
-      
-                <input type="checkbox" name="dice3" value="1">
+                <input type="checkbox" name="dice2" value="1">
           <label>1</label>
+      
+                <input type="checkbox" name="dice3" value="6">
+          <label>6</label>
       
                 <input type="checkbox" name="dice4" value="2">
           <label>2</label>
       
-                <input type="checkbox" name="dice5" value="3">
-          <label>3</label>
+                <input type="checkbox" name="dice5" value="2">
+          <label>2</label>
       
       <p>
           <input type="hidden" name="counterYatzy" value="1"/>
@@ -230,11 +230,11 @@ array(34) {
   ["TERM_PROGRAM_VERSION"]=>
   string(3) "440"
   ["TERM_SESSION_ID"]=>
-  string(36) "94D736EB-518D-478B-A109-AE184C5E75E0"
+  string(36) "36D004D3-2799-4D68-A2CB-DA10892C8BE2"
   ["USER"]=>
   string(14) "hannajohansson"
   ["SSH_AUTH_SOCK"]=>
-  string(51) "/private/tmp/com.apple.launchd.PTen7oiC0b/Listeners"
+  string(51) "/private/tmp/com.apple.launchd.1r11YXkSv2/Listeners"
   ["__CF_USER_TEXT_ENCODING"]=>
   string(13) "0x1F5:0x0:0x7"
   ["MAKELEVEL"]=>
@@ -244,11 +244,11 @@ array(34) {
   ["PATH"]=>
   string(93) "/Users/hannajohansson/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin"
   ["LaunchInstanceID"]=>
-  string(36) "784A5E78-01C0-4FD5-A3C0-01B8BBBC8511"
+  string(36) "900248A3-56A3-45BD-848D-A57254F733BF"
   ["__CFBundleIdentifier"]=>
   string(18) "com.apple.Terminal"
   ["PWD"]=>
-  string(47) "/Users/hannajohansson/dbwebb-kurser/mvc/me/game"
+  string(45) "/Users/hannajohansson/dbwebb-kurser/mvc/me/ci"
   ["LANG"]=>
   string(11) "sv_SE.UTF-8"
   ["XPC_FLAGS"]=>
@@ -276,9 +276,9 @@ array(34) {
   ["DOCUMENT_ROOT"]=>
   string(0) ""
   ["REQUEST_TIME_FLOAT"]=>
-  float(1620373742.797459)
+  float(1621498645.928263)
   ["REQUEST_TIME"]=>
-  int(1620373742)
+  int(1621498645)
   ["argv"]=>
   array(3) {
     [0]=>
@@ -335,10 +335,10 @@ array(34) {
 </html>
 
 
-Time: 00:02.207, Memory: 24.00 MB
+Time: 00:02.300, Memory: 24.00 MB
 
 OK (41 tests, 58 assertions)
 
 Generating code coverage report in Clover XML format ... done [00:00.018]
 
-Generating code coverage report in HTML format ... done [00:00.072]
+Generating code coverage report in HTML format ... done [00:00.081]
