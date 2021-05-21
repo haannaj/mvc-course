@@ -7,6 +7,7 @@ namespace hajh20\Dice;
 use hajh20\Dice\Dice;
 use hajh20\Dice\Bonus;
 use hajh20\Dice\Message;
+use hajh20\Dice\SumUp;
 
 use function Mos\Functions\{
     redirectTo,
@@ -60,19 +61,17 @@ class YatzyClass
         };
 
         // Summera tärningar
-        $sumYatzy = new YatzyClass();
+        $sumYatzy = new SumUp();
         $data["sum" . $data["countY"]] = $sumYatzy->sumUpDices($data["countY"], $data["sumUp"]);
 
         // Nollställ tärningar
-        if ($data["countY"] == "3" || $data["countY"] == "6" || $data["countY"] == "9" || $data["countY"] == "12" || $data["countY"] == "15") :
+        if ($data["countY"] % 3 == 0) :
             for ($i = 0; $i < 5; $i++) {
                 $data["dice" . ($i + 1)] = null;
             }
-        elseif ($data["countY"] == "18") :
-            for ($i = 0; $i < 5; $i++) {
-                $data["dice" . ($i + 1)] = null;
-            }
-            $data["totSumYatzy"] = $data["sum3"] + $data["sum6"] + $data["sum9"] + $data["sum12"] + $data["sum15"] + $data["sum18"];
+            if ($data["countY"] == "18") :
+                $data["totSumYatzy"] = $data["sum3"] + $data["sum6"] + $data["sum9"] + $data["sum12"] + $data["sum15"] + $data["sum18"];
+            endif;
         endif;
 
         // Kalkylera bonus
@@ -84,62 +83,4 @@ class YatzyClass
         sendResponse($body);
     }
 
-    private $counter = 0;
-    private $sumUp = [];
-
-    public function sumUpDices($counter, $sumUp): int
-    {
-        $sumEtt = 0;
-        $sumTva = 0;
-        $sumTre = 0;
-        $sumFyra = 0;
-        $sumFem = 0;
-        $sumSex = 0;
-
-        if ($counter == "3") :
-            for ($i = 0; $i < 5; $i++) {
-                if ($sumUp[$i] == 1) :
-                    $sumEtt += $sumUp[$i];
-                endif;
-            };
-            return $sumEtt;
-        elseif ($counter == "6") :
-            for ($i = 0; $i < 5; $i++) {
-                if ($sumUp[$i] == 2) :
-                    $sumTva += $sumUp[$i];
-                endif;
-            };
-            return $sumTva;
-        elseif ($counter == "9") :
-            for ($i = 0; $i < 5; $i++) {
-                if ($sumUp[$i] == 3) :
-                    $sumTre += $sumUp[$i];
-                endif;
-            };
-            return $sumTre;
-        elseif ($counter == "12") :
-            for ($i = 0; $i < 5; $i++) {
-                if ($sumUp[$i] == 4) :
-                    $sumFyra += $sumUp[$i];
-                endif;
-            };
-            return $sumFyra;
-        elseif ($counter == "15") :
-            for ($i = 0; $i < 5; $i++) {
-                if ($sumUp[$i] == 5) :
-                    $sumFem += $sumUp[$i];
-                endif;
-            };
-            return $sumFem;
-        elseif ($counter == "18") :
-            for ($i = 0; $i < 5; $i++) {
-                if ($sumUp[$i] == 6) :
-                    $sumSex += $sumUp[$i];
-                endif;
-            };
-            return $sumSex;
-        else :
-            return 0;
-        endif;
-    }
 }

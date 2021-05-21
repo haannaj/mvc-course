@@ -56,37 +56,37 @@ class YatzyTest extends TestCase
 
     public function testSumUpDicesYatzy()
     {
-        $test = new YatzyClass();
+        $test = new SumUp();
         $sumUp = [0,1,2,1,1];
         $res = $test->sumUpDices("3", $sumUp);
         $exp = 3;
         $this->assertEquals($exp, $res);
 
-        $test = new YatzyClass();
+        $test = new SumUp();
         $sumUp = [0,1,2,1,1];
         $res = $test->sumUpDices("6", $sumUp);
         $exp = 2;
         $this->assertEquals($exp, $res);
 
-        $test = new YatzyClass();
+        $test = new SumUp();
         $sumUp = [0,1,2,3,3];
         $res = $test->sumUpDices("9", $sumUp);
         $exp = 6;
         $this->assertEquals($exp, $res);
 
-        $test = new YatzyClass();
+        $test = new SumUp();
         $sumUp = [4,1,2,4,4];
         $res = $test->sumUpDices("12", $sumUp);
         $exp = 12;
         $this->assertEquals($exp, $res);
 
-        $test = new YatzyClass();
+        $test = new SumUp();
         $sumUp = [0,5,2,1,1];
         $res = $test->sumUpDices("15", $sumUp);
         $exp = 5;
         $this->assertEquals($exp, $res);
 
-        $test = new YatzyClass();
+        $test = new SumUp();
         $sumUp = [0,5,6,6,1];
         $res = $test->sumUpDices("18", $sumUp);
         $exp = 12;
